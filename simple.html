@@ -6,7 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Piedra, papel o tijeras+</title>
     <link
       rel="stylesheet"
       href="css/styles.css"
@@ -16,40 +19,58 @@
     id="body"
     data-mode="simple"
   >
+  <div class="marker" id="marker">
+
+    <div class="styleMarker userMarker" id="userMarker">
+      <p class="title">YOU</p>
+      <h2 class="points userPoints" id="userPoints">0</h2>
+    </div>
+    <p class="versus">ROCK
+      PAPER
+      SCISSORS</p>
+    <div class="styleMarker pcMarker" id="pcMarker">
+      <p class="title">PC</p>
+      <h2 class="points pcPoints" id="pcPoints">0</h2>
+    </div>
+  </div>
     <div
       class="images"
       id="images"
     >
       <div
-        class="icon"
-        id="paper"
-      >
-        <img
-          src="./assets/images/icon-paper.svg"
+       id="paper" class="paper"
+       >
+       
+       <img
+       src="./assets/images/icon-paper.svg"
+       class="icon "
           alt="Paper"
           data-image="paper"
-        />
-      </div>
+          />
+        </div>
       <div
-        class="icon"
-        id="rock"
+      id="rock"class="rock"
       >
-        <img
-          src="./assets/images/icon-rock.svg"
-          alt="Rock"
+      
+      <img
+      src="./assets/images/icon-rock.svg"
+      alt="Rock"
+      class="icon "
           data-image="rock"
-        />
-      </div>
-      <div
-        class="icon"
-        id="scissors"
-      >
+          />
+        </div>
+        <div
+        id="scissors"class="scissors"
+        >
+        
         <img
-          src="./assets/images/icon-scissors.svg"
-          alt="Scissors"
-          data-image="scissors"
+        src="./assets/images/icon-scissors.svg"
+        alt="Scissors"
+        class="icon "
+        data-image="scissors"
         />
       </div>
+      <img src="./assets/images/bg-triangle.svg" class="figure" alt="Triangle"></img>
     </div>
     <script src="./js/index.js"></script>
   </body>

@@ -6,7 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Piedra, papel, tijeras, spock o lagarto</title>
     <link
       rel="stylesheet"
       href="css/styles.css"
@@ -16,74 +19,81 @@
     id="body"
     data-mode="advanced"
   >
-    <div
-      class="container"
-      id="container"
-    >
-      <div
-        class="userResult"
-        id="userResult"
-      ></div>
-      <p class="versus">VS</p>
-      <div
-        class="pcResult"
-        id="pcResult"
-      ></div>
+  <div class="marker" id="marker">
+
+    <div class="styleMarker userMarker" id="userMarker">
+      <p class="title">YOU</p>
+      <h2 class="points userPoints" id="userPoints">0</h2>
     </div>
+    <p class="versus--advanced">ROCK
+      PAPER
+      SCISSORS
+      LIZARD
+      SPOCK</p>
+    <div class="styleMarker pcMarker" id="pcMarker">
+      <p class="title">PC</p>
+      <h2 class="points pcPoints" id="pcPoints">0</h2>
+    </div>
+  </div>
+  
     <div
       class="images"
       id="images"
     >
+    <div
+    id="paper" class="paper paper--advanced"
+    >
+    
+    <img
+    src="./assets/images/icon-paper.svg"
+    class="icon "
+       alt="Paper"
+       data-image="paper"
+       />
+     </div>
+   <div
+   id="rock"class="rock rock--advanced"
+   >
+   
+   <img
+   src="./assets/images/icon-rock.svg"
+   alt="Rock"
+   class="icon "
+       data-image="rock"
+       />
+     </div>
+     <div
+     id="scissors"class="scissors scissors--advanced"
+     >
+     
+     <img
+     src="./assets/images/icon-scissors.svg"
+     alt="Scissors"
+     class="icon "
+     data-image="scissors"
+     />
+   </div>
       <div
-        class="icon"
-        id="paper"
+      id="lizard" class="lizard lizard--advanced"
       >
-        <img
-          src="./assets/images/icon-paper.svg"
-          alt="Paper"
-          data-image="paper"
-        />
-      </div>
-      <div
-        class="icon"
-        id="rock"
-      >
-        <img
-          src="./assets/images/icon-rock.svg"
-          alt="Rock"
-          data-image="rock"
-        />
-      </div>
-      <div
-        class="icon"
-        id="scissors"
-      >
-        <img
-          src="./assets/images/icon-scissors.svg"
-          alt="Scissors"
-          data-image="scissors"
-        />
-      </div>
-      <div
-        class="icon"
-        id="lizard"
-      >
-        <img
-          src="./assets/images/icon-lizard.svg"
+      <img
+      src="./assets/images/icon-lizard.svg"
+      class="icon"
           alt="Lizard"
           data-image="lizard"
         />
       </div>
       <div
-        class="icon"
-        id="spock"
+      id="spock" class="spock spock--advanced"
       >
-        <img
-          src="./assets/images/icon-spock.svg"
-          alt="Spock"
+      <img
+      src="./assets/images/icon-spock.svg"
+      alt="Spock"
+      class="icon icon--spock"
           data-image="spock"
         />
       </div>
+      <img src="./assets/images/bg-pentagon.svg" class="figure" alt="Pentagon"></img>
     </div>
     <script src="./js/index.js"></script>
   </body>

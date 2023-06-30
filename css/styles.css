@@ -1,0 +1,216 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  font-family: 'League Spartan', sans-serif;
+  background-color: rgb(0, 0, 0);
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+  gap: 200px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+.title-index {
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: monospace;
+  font-style: normal;
+  font-weight: bold;
+}
+.title-index:hover {
+  filter: drop-shadow(4px 4px 4px #a973e3);
+}
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 120px;
+  align-items: center;
+}
+.rules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+.icon {
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+.icon--spock {
+  position: relative;
+  left: 20px;
+}
+.advanced {
+  position: relative;
+  bottom: 30px;
+}
+.marker {
+  width: 700px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+
+  margin-top: 40px;
+  padding-top: 10px;
+  border-radius: 2rem;
+  border: 0.1rem rgb(255, 255, 255) solid;
+  gap: 30px;
+}
+.styleMarker {
+  width: 150px;
+  height: 140px;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: auto;
+  background-color: #fff;
+}
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+}
+.points {
+  font-size: 50px;
+  position: relative;
+  bottom: 20px;
+}
+.versus--advanced {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-family: monospace;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+.versus {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-family: monospace;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+.paper {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: 70px;
+  border: 10px solid rgb(89, 220, 87);
+  border-radius: 50%;
+}
+.paper--advanced {
+  left: 680px;
+  top: 140px;
+}
+.paper:hover {
+  filter: drop-shadow(0px 0px 3px #47cf1e);
+}
+.rock {
+  position: relative;
+  top: 300px;
+  width: 150px;
+  height: 150px;
+
+  border: 10px solid rgb(112, 64, 208);
+  border-radius: 50%;
+}
+.rock--advanced {
+  left: 360px;
+  top: 350px;
+}
+.rock:hover {
+  filter: drop-shadow(0px 0px 3px #a254e2);
+}
+.scissors {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  right: 70px;
+  border: 10px solid rgb(220, 87, 87);
+  border-radius: 50%;
+}
+.scissors--advanced {
+  left: -1px;
+}
+.scissors:hover {
+  filter: drop-shadow(0px 0px 8px #cc1818);
+}
+.lizard {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border: 10px solid rgb(220, 127, 87);
+  border-radius: 50%;
+}
+.lizard--advanced {
+  right: 370px;
+  top: 350px;
+}
+.lizard:hover {
+  filter: drop-shadow(0px 0px 8px #cc6f18);
+}
+.spock {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border: 10px solid rgb(59, 186, 169);
+  border-radius: 50%;
+}
+.spock--advanced {
+  right: 690px;
+  top: 140px;
+}
+.spock:hover {
+  filter: drop-shadow(0px 0px 8px #18cca8);
+}
+.figure {
+  width: 400px;
+  top: 420px;
+  align-items: center;
+  position: absolute;
+  z-index: -1;
+}
