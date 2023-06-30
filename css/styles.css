@@ -214,3 +214,8 @@ body {
   position: absolute;
   z-index: -1;
 }
+.result {
+  color: white;
+  position: absolute;
+  top: 300px;
+}

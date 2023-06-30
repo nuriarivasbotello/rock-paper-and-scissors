@@ -6,6 +6,7 @@ const spock = document.getElementById('spock');
 const images = document.getElementById('images');
 const userPoints = document.getElementById('userPoints');
 const pcPoints = document.getElementById('pcPoints');
+const result = document.getElementById('result');
 const allowedPlays = ['paper', 'rock', 'scissors'];
 if (document.body.dataset.mode === 'advanced') {
   allowedPlays.push[('lizard', 'spock')];
@@ -48,7 +49,9 @@ const gameRules = {
 };
 
 const randomResult = () => {
+  let result = '';
   const randomNumber = Math.floor(Math.random() * allowedPlays.length);
+
   pcPlay = allowedPlays[randomNumber];
   if (pcPlay === userPlay) {
     console.log(
@@ -57,6 +60,7 @@ const randomResult = () => {
   } else if (gameRules[userPlay][pcPlay]) {
     userMarker++;
     userPoints.textContent = userMarker;
+
     console.log(`Has elegido ${userPlay} y el ordenador ${pcPlay}. Has ganado`);
   } else {
     pcMarker++;
