@@ -105,8 +105,8 @@ const handleClick = event => {
 };
 const buttonBack = event => {
   userPlay = event.target.dataset.button;
-  secondScreen.classList.replace('show', 'hidden');
   firstScreen.classList.replace('hidden', 'show');
+  secondScreen.classList.replace('show', 'hidden');
 };
 firstScreen.addEventListener('click', handleClick);
 if (document.body.dataset.mode === 'simple') {
@@ -114,6 +114,7 @@ if (document.body.dataset.mode === 'simple') {
 } else {
   console.log('Estás en el modo avanzado');
 }
+secondScreen.addEventListener('click', buttonBack);
 
 const showResult = () => {
   imageResultPc.src = resultInfo[pcPlay].src;
