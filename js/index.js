@@ -3,14 +3,18 @@ const rock = document.getElementById('rock');
 const scissors = document.getElementById('scissors');
 const lizard = document.getElementById('lizard');
 const spock = document.getElementById('spock');
-const images = document.getElementById('images');
+const firstScreen = document.getElementById('images');
 const userPoints = document.getElementById('userPoints');
 const pcPoints = document.getElementById('pcPoints');
 const result = document.getElementById('result');
 const allowedPlays = ['paper', 'rock', 'scissors'];
 if (document.body.dataset.mode === 'advanced') {
-  allowedPlays.push[('lizard', 'spock')];
+  allowedPlays.push('lizard', 'spock');
 }
+const secondScreen = document.getElementById('secondScreen');
+const imageResultUser = document.getElementById('image-result-user');
+const imageResultPc = document.getElementById('image-result-pc');
+const button = document.getElementById('button');
 let userPlay;
 let pcPlay;
 let userMarker = 0;
@@ -47,7 +51,28 @@ const gameRules = {
     lizard: true
   }
 };
-
+const resultInfo = {
+  paper: {
+    src: './assets/images/icon-paper.svg',
+    class: 'green'
+  },
+  rock: {
+    src: './assets/images/icon-rock.svg',
+    class: 'purple'
+  },
+  scissors: {
+    src: './assets/images/icon-scissors.svg',
+    class: 'red'
+  },
+  lizard: {
+    src: './assets/images/icon-lizard.svg',
+    class: 'orange'
+  },
+  spock: {
+    src: './assets/images/icon-spock.svg',
+    class: 'blue'
+  }
+};
 const randomResult = () => {
   let result = '';
   const randomNumber = Math.floor(Math.random() * allowedPlays.length);
@@ -73,9 +98,29 @@ const randomResult = () => {
 
 const handleClick = event => {
   userPlay = event.target.dataset.image;
+  firstScreen.classList.replace('show', 'hidden');
+  secondScreen.classList.replace('hidden', 'show');
   randomResult();
+  showResult();
 };
-images.addEventListener('click', handleClick);
+const buttonBack = event => {
+  userPlay = event.target.dataset.button;
+  secondScreen.classList.replace('show', 'hidden');
+  firstScreen.classList.replace('hidden', 'show');
+};
+firstScreen.addEventListener('click', handleClick);
+if (document.body.dataset.mode === 'simple') {
+  console.log('Estás en el modo simple');
+} else {
+  console.log('Estás en el modo avanzado');
+}
+
+const showResult = () => {
+  imageResultPc.src = resultInfo[pcPlay].src;
+  secondScreen.classList.add(resultInfo[pcPlay].class);
+  imageResultUser.src = resultInfo[userPlay].src;
+  secondScreen.classList.add(resultInfo[userPlay].class);
+};
 // paper.addEventListener('click', () => {
 //   userPlay = 'paper';
 //   randomResult();
@@ -147,9 +192,3 @@ images.addEventListener('click', handleClick);
 //   }
 // };
 // boxesElement.addEventListener('click', handleClick);
-
-if (document.body.dataset.mode === 'simple') {
-  console.log('Estás en el modo simple');
-} else {
-  console.log('Estás en el modo avanzado');
-}

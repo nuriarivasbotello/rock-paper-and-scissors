@@ -34,11 +34,11 @@
     </div>
   </div>
     <div
-      class="images"
+      class="images firstScreen show"
       id="images"
     >
       <div
-       id="paper" class="paper"
+       id="paper" class="paper "
        >
        
        <img
@@ -49,7 +49,7 @@
           />
         </div>
       <div
-      id="rock"class="rock"
+      id="rock"class="rock "
       >
       
       <img
@@ -60,7 +60,7 @@
           />
         </div>
         <div
-        id="scissors"class="scissors"
+        id="scissors"class="scissors "
         >
         
         <img
@@ -71,7 +71,24 @@
         />
       </div>
       <img src="./assets/images/bg-triangle.svg" class="figure" alt="Triangle"></img>
-      <h2 class="result" id="result">Result</h2>
+      
+    </div>
+    <div class="secondScreen hidden" id="secondScreen">
+      <div class="result">
+        <h2 class="title-choice">Your Picked</h2>
+        <h2 class="title-choice">The Pc Picked</h2>
+      </div>
+      <div class="image-result">
+        <img src="" class="image-result-user" id="image-result-user" alt="Result User"/>
+        <img src="" class="image-result-pc" id="image-result-pc" alt="Result User"/>
+      </div>
+      <div class="circles">
+
+        <div class="circle"></div>
+        <div class="circle "></div>
+      </div>
+      <button class="button" id="button">PLAY AGAIN</button>
+      <img src="./assets/images/bg-triangle.svg" class=" figure figure-move" alt="Triangle"></img>
     </div>
     <script src="./js/index.js"></script>
   </body>

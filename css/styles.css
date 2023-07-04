@@ -20,7 +20,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+:root {
+  --green: 10px solid rgb(89, 220, 87);
+  --purple: 10px solid rgb(112, 64, 208);
+  --red: 10px solid rgb(220, 87, 87);
+}
 body {
   max-width: 1440px;
   margin: auto;
@@ -218,4 +222,75 @@ body {
   color: white;
   position: absolute;
   top: 300px;
+}
+.choice-user {
+  position: relative;
+
+  background-color: red;
+}
+.choice-pc {
+  background-color: blue;
+}
+.secondScreen {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
+.show {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+.result {
+  display: flex;
+  flex-direction: row;
+  gap: 510px;
+  padding-top: 20px;
+}
+.circles {
+  display: flex;
+  flex-direction: row;
+  padding-top: 230px;
+  gap: 470px;
+}
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid white;
+}
+.prove {
+  background-color: red;
+}
+.figure-move {
+  width: 400px;
+  align-items: center;
+}
+.button {
+  width: 140px;
+  height: 50px;
+  position: absolute;
+  top: 550px;
+  border-radius: 0.4rem;
+}
+
+.image-result {
+  display: flex;
+  flex-direction: row;
+  padding-top: 260px;
+  gap: 540px;
+  align-items: center;
+  position: absolute;
+}
+.image-result-user {
+  width: 130px;
+  height: 130px;
+  align-items: center;
+}
+.image-result-pc {
+  width: 130px;
+  height: 130px;
+
+  align-items: center;
 }
